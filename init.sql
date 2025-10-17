@@ -8,6 +8,7 @@ CREATE TABLE customers (
   state VARCHAR(100)
 );
 
+
 CREATE TABLE products (
   product_id INT PRIMARY KEY,
   product_name VARCHAR(100),
@@ -18,6 +19,8 @@ CREATE TABLE products (
   stock INT,
   ratings DECIMAL(3,1)
 );
+
+
 CREATE TABLE orders (
   order_id INT PRIMARY KEY,
   customer_id INT,
@@ -33,3 +36,4 @@ CREATE TABLE orders (
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
   FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
